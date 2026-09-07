@@ -23,6 +23,8 @@ viewer: false
 
 # LifeSci-Harbor-Bench: 100 Open Research Tasks for Agentic Life Science
 
+**Dataset:** https://huggingface.co/datasets/mondaycake/lifesci-harbor-bench
+
 **100 ultra-long-horizon, open-ended research tasks** evaluating coding agents on
 **real, computationally verifiable (dry-lab) research in the life sciences**, with an
 emphasis on **aging / longevity / healthspan**. Every task is self-contained, derived
@@ -37,6 +39,7 @@ reproducibility — not whether a specific number is correct.
 
 | Metric | Value |
 |--------|-------|
+| Dataset | [mondaycake/lifesci-harbor-bench](https://huggingface.co/datasets/mondaycake/lifesci-harbor-bench) |
 | Total tasks | **100** |
 | Domains | **14** |
 | Real papers cited (DOI/PMID) | **514+** |
