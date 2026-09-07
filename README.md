@@ -42,9 +42,15 @@ reproducibility — not whether a specific number is correct.
 | Real papers cited (DOI/PMID) | **514+** |
 | Real clinical trials (NCT) | **139+** |
 | Real database references | **489+** |
-| Average estimated effort | **130 hours** (range 80–200) |
+| Average estimated effort | **130 hours** (range 80–200) * |
 | Verification layers | **6 deterministic + 1 LLM judge** |
 | Cognitive traps per task | **2–4** (unit inconsistency, outliers, confounders, multiple testing) |
+
+> **\* On "hours":** every hour figure in this README — the average above and the
+> `Est. Hours` column in the task matrix — is a **self-estimate produced by the
+> task-authoring agent**. These numbers are **not measured**: they do not come from
+> timing any agent run or human baseline, and they have not been empirically validated.
+> Treat them only as a coarse, relative difficulty proxy for comparing tasks.
 
 ## Why These Tasks
 
@@ -115,9 +121,12 @@ detected hallucination (<0.4) → total score capped at 0.3.
 
 ## Complete Task Matrix
 
+`Est. Hours` below is an **agent self-estimate, not a measured duration** — see the note
+under [Key Numbers](#key-numbers).
+
 ### biological-clock (7 tasks)
 
-| # | Task ID | Title | Hours | Papers | Trials | DBs |
+| # | Task ID | Title | Est. Hours | Papers | Trials | DBs |
 |---|---------|-------|-------|--------|--------|-----|
 | 1 | `clock-acceleration-discordance-tissues` | Epigenetic Age Acceleration Discordance Across Tissues: Multi-Tissue M... | 140 | 5 | 1 | 5 |
 | 2 | `clock-exercise-intervention-rct` | Epigenetic Clock Response to Exercise Intervention: Reanalysis of Rand... | 130 | 5 | 2 | 5 |
@@ -129,7 +138,7 @@ detected hallucination (<0.4) → total score capped at 0.3.
 
 ### cardiovascular (8 tasks)
 
-| # | Task ID | Title | Hours | Papers | Trials | DBs |
+| # | Task ID | Title | Est. Hours | Papers | Trials | DBs |
 |---|---------|-------|-------|--------|--------|-----|
 | 1 | `arterial-stiffness-dementia-causal` | Arterial Stiffness as a Causal Risk Factor for Dementia: MR and Mediat... | 130 | 5 | 1 | 5 |
 | 2 | `biological-age-heart-failure` | Biological Age Acceleration and Incident Heart Failure | 140 | 5 | 1 | 5 |
@@ -142,7 +151,7 @@ detected hallucination (<0.4) → total score capped at 0.3.
 
 ### cellular (8 tasks)
 
-| # | Task ID | Title | Hours | Papers | Trials | DBs |
+| # | Task ID | Title | Est. Hours | Papers | Trials | DBs |
 |---|---------|-------|-------|--------|--------|-----|
 | 1 | `autophagy-flux-human-aging-omics` | Autophagy Flux Measurement in Human Aging: Transcriptomic and Proteomi... | 120 | 5 | 1 | 5 |
 | 2 | `cellular-senescence-single-cell` | Single-Cell Transcriptomic Atlas of Cellular Senescence in Aging | 130 | 5 | 1 | 5 |
@@ -155,7 +164,7 @@ detected hallucination (<0.4) → total score capped at 0.3.
 
 ### circadian-rhythm (6 tasks)
 
-| # | Task ID | Title | Hours | Papers | Trials | DBs |
+| # | Task ID | Title | Est. Hours | Papers | Trials | DBs |
 |---|---------|-------|-------|--------|--------|-----|
 | 1 | `chronotherapy-cancer-elderly-outcomes` | Chronotherapy Optimization for Cancer Treatment in Elderly Patients | 110 | 5 | 3 | 5 |
 | 2 | `circadian-disruption-metabolic-causal-inference` | Circadian Disruption and Metabolic Syndrome: Multi-Cohort Causal Infer... | 110 | 6 | 2 | 5 |
@@ -166,7 +175,7 @@ detected hallucination (<0.4) → total score capped at 0.3.
 
 ### epigenetics (8 tasks)
 
-| # | Task ID | Title | Hours | Papers | Trials | DBs |
+| # | Task ID | Title | Est. Hours | Papers | Trials | DBs |
 |---|---------|-------|-------|--------|--------|-----|
 | 1 | `chromatin-accessibility-immune-aging` | Chromatin Accessibility Remodeling and Immune Cell Dysfunction in Huma... | 110 | 5 | 1 | 5 |
 | 2 | `dna-methylation-drift-causality` | Causal Inference of DNA Methylation Drift in Aging | 120 | 5 | 1 | 5 |
@@ -179,7 +188,7 @@ detected hallucination (<0.4) → total score capped at 0.3.
 
 ### genetics (7 tasks)
 
-| # | Task ID | Title | Hours | Papers | Trials | DBs |
+| # | Task ID | Title | Est. Hours | Papers | Trials | DBs |
 |---|---------|-------|-------|--------|--------|-----|
 | 1 | `aging-metabolite-gwas` | Genome-Wide Association Study of Aging-Related Metabolites and Causal ... | 130 | 5 | 1 | 5 |
 | 2 | `apoe-alzheimer-causal-mechanism` | APOE Genotype and Alzheimer's Disease: Causal Mechanisms Beyond Risk A... | 150 | 5 | 1 | 5 |
@@ -191,7 +200,7 @@ detected hallucination (<0.4) → total score capped at 0.3.
 
 ### immunology (7 tasks)
 
-| # | Task ID | Title | Hours | Papers | Trials | DBs |
+| # | Task ID | Title | Est. Hours | Papers | Trials | DBs |
 |---|---------|-------|-------|--------|--------|-----|
 | 1 | `aging-vaccine-design` | Rational Vaccine Design for Aging Immune Systems | 130 | 5 | 1 | 5 |
 | 2 | `autoimmunity-immunosenescence-gwas` | Autoimmunity Risk in Immunosenescence: GWAS and Electronic Health Reco... | 130 | 5 | 1 | 5 |
@@ -203,7 +212,7 @@ detected hallucination (<0.4) → total score capped at 0.3.
 
 ### metabolism (8 tasks)
 
-| # | Task ID | Title | Hours | Papers | Trials | DBs |
+| # | Task ID | Title | Est. Hours | Papers | Trials | DBs |
 |---|---------|-------|-------|--------|--------|-----|
 | 1 | `ages-vascular-aging-proteomics` | Advanced Glycation End Products (AGEs) and Vascular Aging: Cohort Prot... | 110 | 5 | 1 | 5 |
 | 2 | `bcaa-insulin-resistance-causal-mr` | Branched-Chain Amino Acids as Causal Drivers of Insulin Resistance: Me... | 120 | 5 | 1 | 5 |
@@ -216,7 +225,7 @@ detected hallucination (<0.4) → total score capped at 0.3.
 
 ### microbiome (8 tasks)
 
-| # | Task ID | Title | Hours | Papers | Trials | DBs |
+| # | Task ID | Title | Est. Hours | Papers | Trials | DBs |
 |---|---------|-------|-------|--------|--------|-----|
 | 1 | `antibiotic-aging-accelerant` | Antibiotic Exposure as an Accelerant of Biological Aging: Pharmacoepid... | 150 | 5 | 1 | 4 |
 | 2 | `centenarian-microbiome-meta-analysis` | Meta-Analysis of Gut Microbiome Signatures in Centenarians vs. Elderly... | 120 | 7 | 1 | 5 |
@@ -229,7 +238,7 @@ detected hallucination (<0.4) → total score capped at 0.3.
 
 ### neuroscience (8 tasks)
 
-| # | Task ID | Title | Hours | Papers | Trials | DBs |
+| # | Task ID | Title | Est. Hours | Papers | Trials | DBs |
 |---|---------|-------|-------|--------|--------|-----|
 | 1 | `bbb-permeability-aging` | Blood-Brain Barrier Permeability in Normal Aging: Imaging and Transcri... | 130 | 5 | 1 | 5 |
 | 2 | `blood-epigenetic-clock-ad` | Blood-Based Epigenetic Clocks for Alzheimer's Disease Prediction: Long... | 120 | 5 | 2 | 4 |
@@ -242,7 +251,7 @@ detected hallucination (<0.4) → total score capped at 0.3.
 
 ### pharmacology-senolytics (7 tasks)
 
-| # | Task ID | Title | Hours | Papers | Trials | DBs |
+| # | Task ID | Title | Est. Hours | Papers | Trials | DBs |
 |---|---------|-------|-------|--------|--------|-----|
 | 1 | `dasatinib-quercetin-clinical-meta-analysis` | Systematic Review and Meta-Analysis of Dasatinib Plus Quercetin (D+Q) ... | 150 | 5 | 3 | 5 |
 | 2 | `fisetin-pharmacokinetics-target-engagement` | Fisetin Pharmacokinetics, Bioavailability, and Target Engagement in Ag... | 120 | 5 | 3 | 5 |
@@ -254,7 +263,7 @@ detected hallucination (<0.4) → total score capped at 0.3.
 
 ### reproductive-aging (6 tasks)
 
-| # | Task ID | Title | Hours | Papers | Trials | DBs |
+| # | Task ID | Title | Est. Hours | Papers | Trials | DBs |
 |---|---------|-------|-------|--------|--------|-----|
 | 1 | `amh-afc-menopause-timing` | Ovarian Reserve Biomarkers Predict Menopause Timing | 120 | 5 | 1 | 5 |
 | 2 | `chemo-ovarian-damage-fertility` | Chemotherapy-Induced Ovarian Damage and Fertility Preservation | 130 | 5 | 5 | 5 |
@@ -265,7 +274,7 @@ detected hallucination (<0.4) → total score capped at 0.3.
 
 ### stem-cell-regenerative (7 tasks)
 
-| # | Task ID | Title | Hours | Papers | Trials | DBs |
+| # | Task ID | Title | Est. Hours | Papers | Trials | DBs |
 |---|---------|-------|-------|--------|--------|-----|
 | 1 | `clonal-hematopoiesis-cardiovascular-ukbiobank` | Clonal Hematopoiesis and Cardiovascular Risk in UK Biobank | 120 | 6 | 1 | 5 |
 | 2 | `hair-follicle-stem-cell-graying-scrna` | Hair Follicle Stem Cell Exhaustion and Melanocyte Depletion in Human H... | 100 | 6 | 1 | 5 |
@@ -277,7 +286,7 @@ detected hallucination (<0.4) → total score capped at 0.3.
 
 ### systems (5 tasks)
 
-| # | Task ID | Title | Hours | Papers | Trials | DBs |
+| # | Task ID | Title | Est. Hours | Papers | Trials | DBs |
 |---|---------|-------|-------|--------|--------|-----|
 | 1 | `aging-hallmark-causal-network` | Causal Network Analysis of the Interacting Hallmarks of Aging | 150 | 5 | 1 | 5 |
 | 2 | `hallmark-crosstalk-multiomics-causal` | Aging Hallmark Cross-Talk: Multi-Omics Data-Driven Causal Graph Constr... | 160 | 5 | 1 | 5 |
